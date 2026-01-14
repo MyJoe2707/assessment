@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Highlight text
+.description {
+  color: $default-text;
+  line-height: 30px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400; 
+}
+
+hr {
+  width: 80px;
+  margin: $spacing-md auto $spacing-xl auto;
+  border: 1.5px solid $primary-color;
+}
+
+.green-text {
+  color: $primary-color;
+}
+
+.show-none {
+  display: block;
+}
+
+// Button styles
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 25px 0;
+
+  a {
+    display: inline-block;
+    background-color: $secondary-color;
+    color: $light;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: $font-size-lg;
+  }
+}
+
+// Testimonials
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  margin: $spacing-xl 0;
+}
+
+.testimonial {
+  width: 100%;
+  padding: $spacing-md;
+  text-align: center;
+  margin-bottom: $spacing-md;
+
+  &-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto $spacing-md;
+  }
+
+  &-info,
+  &-info1 {
+    padding: 0 $spacing-lg;
+  }
+
+  &-content {
+    position: relative;
+    margin: 0 35px;
+
+    &::before {
+      @include pseudo;
+      top: 0px;
+      left: 0px;
+      width: 55px;
+      height: 55px;
+      background-image: url(../images/double_quotes.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 0.5;
+    }
+  }
+
+  .testimonial-quote {
+    color: $dark-text;
+    font-style: italic;
+    margin-bottom: $spacing-md;
+    line-height: 1.6;
+    font-size: $font-size-md;
+  }
+
+  &-author {
+    color: $primary-color;
+    font-weight: bold;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+}
+// Header styling
+header {
+  .logo {
+    padding: 34px 0;
+    text-align: center;
+    img {
+      max-width: 210px;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  position: relative;
+  height: 300px; 
+  margin-bottom: $spacing-xl;
+  overflow: hidden;
+  
+ .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/hero_image.webp");
+    background-repeat: no-repeat;
+    background-position: 9% center;
+    background-size: cover;
+  }
+  hero-layer {
+    display: none;
+  }
+}
+
+
+// heighlight Section
+.highlight {
+  text-align: center;
+  margin: 40px 0;
+  
+  h2 {
+    color: $primary-color;
+    font-size: $font-size-xxxl;
+    margin-bottom: $spacing-md;
+    font-weight: 500;
+  }
+}
+
+// Advantage Section
+.citizen_advantage {
+  text-align: center;
+  margin: $spacing-xxl 0;
+  
+  h2 {
+    color: $primary-color;
+    font-size: $font-size-xxxl;
+    margin-bottom: $spacing-md;
+    font-weight: 500;
+  }
+}
+
+// Features data
+.features_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  width: 100%;
+  padding: 0 $spacing-sm;
+  
+  h3 {
+    color: $primary-color;
+    font-size: $font-size-xl;
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  a {
+    color: $green-color;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;  
+    &::after {
+      content: ">";
+      margin-left: $spacing-xs;
+    }
+  }
+}
+
+.feature_seperator {
+  width: 90%;
+  height: 1px;
+  background-color: $divider-color;
+  margin: $spacing-lg auto;
+}
+
+// Bank Information Section
+.bank {
+  background-color: $light-bg;
+  margin: $spacing-xl 0;
+  
+  h3 {
+    background-color: $primary-color;
+    color: $light;
+    text-align: center;
+    padding: $spacing-md;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  p {
+    padding: $spacing-md $spacing-sm;
+  }
+}
+
+// Footer styling
+footer {
+  padding: 37px 0;
+  font-size: $font-size-sm;
+  color: $dark-text;
+  border-top: 2px solid $primary-color;
+  
+  .footer-first {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .social-media {
+    padding: 0px 0 27px 0;
+    display: flex;
+    gap: $spacing-xs;
+    justify-content: flex-start;
+    
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
+  .footer-data {
+    font-size: $font-size-xs;
+    line-height: 1.4;
+    text-align: left;
+    
+    a, p {
+      color: $default-text;
+      font-weight: bold;
+    }
+  }
+  
+  .footer-below {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: $spacing-sm;
+    font-size: $font-size-xs;
+    
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
